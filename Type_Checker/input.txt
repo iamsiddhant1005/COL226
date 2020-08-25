@@ -1,0 +1,17 @@
+My input -
+typeElaborates([("X",intT),("Y",boolT)],paradef(def("X",true),def("Z",add(3,"X"))),Gamma).
+typeElaborates([("Y",boolT)],seqdef(def("X",3),def("Z",add("X","X"))),Gamma).
+typeElaborates([("Y",boolT)],localdef(def("X",true),localdef(def("M","X"),def("Z","M"))),Gamma).
+hastype([("Y",intT)],let_in_end(seqdef(def("X",3),def("Z",true)),add("Y","X")),T).
+hastype([("X",boolT),("Y",intT)],nTuple([3,true,"X","Y"]),T).
+hastype([("X",intT),("Y",intT)],abstract(par(["X","Y"]),add("X",3)),T).
+hastype([("R",arrow(intT,boolT)),("X",intT)],app("R","X"),T).
+hastype([("X",intT),("Y",boolT)],proj(["X","Y","Z"],1),T).
+
+Polymorphism-
+hastype([("X",boolT),("Y",boolT)],equal(A,B),T).
+
+TA input -
+typeElaborates([],seqdef(def("Y",23),def("X",true)),T).
+hastype([("Y",boolT),("X",intT)],nTuple([true,false,23,"Y","X"]),T).
+hastype([("Y",boolT),("X",intT)],lessThan("X",23),T).
