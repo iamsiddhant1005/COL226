@@ -1,0 +1,17 @@
+Secd - 
+(Call(Lambda("x",Mult(Var("x"),Num(5))),(Call(Lambda("y",Add(Var("y"),Num(1))),Num(4)))));;
+(Call(Lambda("x",And(Var("x"),Boolean(true))),(Call(Lambda("y",GreaterThan(Var("y"),Num(1))),Num(4)))));;
+Let_in_end("z",Num(4),(Call(Lambda("x",Mult(Var("x"),Num(5))),(Call(Lambda("y",Add(Var("y"),Num(1))),Var("z"))))));;
+If_then_else(GreaterThan(Add(Num(4),Num(-5)),Num(0)),Call(Lambda("y",GreaterThan(Var("y"),Num(1))),Num(4)),Call(Lambda("x",Mult(Var("x"),Num(5))),Num(4)));;
+
+
+Krivine - 
+(Call(Lambda("x",Mult(Var("x"),Num(4))),(Call(Lambda("y",Add(Var("y"),Num(1))),Num(4)))));;
+(Call(Lambda("x",Mult(Var("x"),Num(5))),(Call(Lambda("y",Add(Var("y"),Num(1))),Num(4)))));;
+(Call(Lambda("x",And(Var("x"),Boolean(true))),(Call(Lambda("y",GreaterThan(Var("y"),Num(1))),Num(-4)))));;
+ Let_in_end("z",Num(4),(Call(Lambda("x",Mult(Var("x"),Num(5))),(Call(Lambda("y",Add(Var("y"),Num(1))),Var("z"))))));;
+ If_then_else(GreaterThan(Add(Num(4),Num(-5)),Num(0)),Call(Lambda("y",GreaterThan(Var("y"),Num(1))),Num(4)),Call(Lambda("x",Mult(Var("x"),Num(5))),Num(4)));;
+
+ Differentitating Test Case -
+ Call(Lambda("y",Num(5)),Div(Num(0),Num(6)));;
+ Call(Lambda("y",Num(5)),Div(Num(1),Num(6)));;
